@@ -18,8 +18,7 @@ logger.level = Logger::INFO
 # Routes
 get '/' do
   # Serve the landing page HTML
-  content_type 'text/html'
-  File.read(File.join('public', 'index.html'))
+  send_file File.join(settings.public_folder, 'index.html')
 end
 
 # Health check endpoint
