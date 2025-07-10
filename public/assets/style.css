@@ -236,12 +236,12 @@ iframe {
 
 .section-white {
     background: #fff;
-    padding: 90px 0 100px 0;
+    padding: 30px 0 30px 0;
 }
 
 .section-grey {
     background: #fafbfc;
-    padding: 90px 0 100px 0;
+    padding: 30px 0 30px 0;
 }
 
 .section-green {
@@ -250,7 +250,7 @@ iframe {
 }
 
 .section-bg-2 {
-    background: url(../images/bg001.jpg);
+    background: url(hero2.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -565,10 +565,9 @@ iframe {
 .navbar {
     width: 100%;
     z-index: 9999;
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: 0;
     padding-right: 0;
+    padding: 0.2rem 2rem;
 }
 
 .navbar-toggler {
@@ -587,7 +586,7 @@ iframe {
 
 .navbar-fixed-top {
     position: absolute !important;
-    background-color: rgba(0, 0, 0, 0.55) !important;
+    background-color: rgba(0, 0, 0, 0.99) !important;
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.04) !important;
     border-bottom: none;
     transition: background-color 0.25s ease 0s;
@@ -595,7 +594,7 @@ iframe {
 
 .navbar-fixed-top.opaque {
     position: fixed !important;
-    background-color: rgba(0, 0, 0, 0.79) !important;
+    background-color: rgba(0, 0, 0, 0.95) !important;
     border-bottom: 1px solid #212121;
     transition: all 0.25s ease-in-out 0s;
 }
@@ -799,9 +798,9 @@ p.contact-info i {
     position: relative;
     z-index: 999;
     overflow: hidden;
-    padding-top: 140px;
-    padding-bottom: 110px;
-    background: url(../images/bg000.jpg) top center no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url(hero.jpg) top center no-repeat;
     background-size: cover;
 }
 
@@ -1739,6 +1738,10 @@ ul.benefits li i {
     .top-margins-images {
         margin-top: 40px;
     }
+
+    .navbar-fixed-top.opaque {
+        position: static !important;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1773,4 +1776,14 @@ ul.benefits li i {
         padding-right: 25px;
         padding-left: 25px;
     }
+}
+
+.sticky-bottom-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    background-color: #fff;
+    border-top: 1px solid #dee2e6;
 }
