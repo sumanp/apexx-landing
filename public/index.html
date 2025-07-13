@@ -23,10 +23,6 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
 
-        <!-- Fonts -->
-        <link href="./assets/css" rel="stylesheet" />
-        <link href="./assets/css(1)" rel="stylesheet" />
-
         <!-- Font Favicon -->
         <link rel="shortcut icon" href="#" />
 
@@ -150,7 +146,7 @@
         <!--end header -->
 
         <!--begin home section -->
-        <section class="home-section" id="home">
+        <section class="home-section d-none d-md-block" id="home">
             <div class="home-section-overlay"></div>
 
             <!--begin container -->
@@ -159,27 +155,28 @@
                 <div class="row">
                     <!--begin col-md-5-->
                     <div class="col-md-6 padding-top-40">
-                        <h1>
-                            Leakproof. Rattle-Free. Steel. Be First to Get It
-                        </h1>
+                        <h1>Tired of Noisy, Leaky Plastic Shakers?</h1>
                         <p class="hero-text">
-                            Join our exclusive early‐bird launch and lock in 30%
-                            off your Apexx Steel Protein Shaker Bottle—only 100
-                            spots available!
+                            Meet Apexx: the last shaker bottle you’ll ever need.
+                            Silent 2-in-1 mixer, secure twist seal, premium
+                            steel. 30% off for first 100 early birds.
                         </p>
                         <!-- Keep benefits structure, update content -->
                         <ul class="home-benefits">
                             <li>
-                                <i class="fas fa-check-circle"></i>Innovative
-                                2-in-1 agitator - zero noise
+                                <i class="fas fa-check-circle"></i
+                                ><b>Silent Mixing</b>
+                                No rattles—just smooth, quiet shakes.
                             </li>
                             <li>
-                                <i class="fas fa-check-circle"></i>100%
-                                leakproof twist-off cap + silicone seal
+                                <i class="fas fa-check-circle"></i
+                                ><b>Leakproof Seal</b> Toss it in your bag. Zero
+                                spills.
                             </li>
                             <li>
-                                <i class="fas fa-check-circle"></i>Premium 18/8
-                                stainless steel - no metallic aftertaste
+                                <i class="fas fa-check-circle"></i
+                                ><b>Pure Taste</b> No odors. No metallic
+                                aftertaste.
                             </li>
                         </ul>
                     </div>
@@ -192,29 +189,35 @@
                     <!--begin col-md-5-->
                     <div class="col-md-5 margin-top-20">
                         <!--begin register-form-wrapper-->
-                        <div
-                            class="register-form-wrapper wow bounceIn"
-                            data-wow-delay="0.5s"
-                            id="reserve-now"
-                            style="
-                                visibility: visible;
-                                animation-delay: 0.5s;
-                                animation-name: bounceIn;
-                            "
-                        >
-                            <h3>Reserve Your Shaker & Save 30%</h3>
-                            <p>Only 100 early-bird spots available</p>
+                        <div class="ribbon-wrapper">
+                            <div
+                                class="register-form-wrapper wow bounceIn"
+                                data-wow-delay="0.5s"
+                                id="reserve-now"
+                                style="
+                                    visibility: visible;
+                                    animation-delay: 0.5s;
+                                    animation-name: bounceIn;
+                                "
+                            >
+                                <h3>Reserve Your Shaker & Save 30%</h3>
+                                <p>Only 100 early-bird spots available</p>
 
-                            <!--begin form-->
-                            <div class="ml-embedded" data-form="1cif2J"></div>
+                                <!--begin form-->
+                                <div
+                                    class="ml-embedded"
+                                    data-form="1cif2J"
+                                ></div>
 
-                            <!--end form-->
-                            <p style="font-size: 14px; line-height: 20px">
-                                <em
-                                    >No payment today. You'll receive a one-time
-                                    coupon code early August.</em
-                                >
-                            </p>
+                                <!--end form-->
+                                <p style="font-size: 14px; line-height: 20px">
+                                    <em
+                                        >No payment today. You'll receive a
+                                        one-time coupon code early August.</em
+                                    >
+                                </p>
+                            </div>
+                            <div class="ribbon">30% OFF</div>
                         </div>
                         <!--end register-form-wrapper-->
                     </div>
@@ -223,6 +226,47 @@
                 <!--end row -->
             </div>
             <!--end container -->
+        </section>
+
+        <section
+            class="home-section-mobile d-block d-md-none"
+            style="position: relative; overflow: hidden"
+        >
+            <img
+                src="./assets/hero-bg.png"
+                alt="Apexx Shaker Mobile Banner"
+                style="width: 100%; height: auto; display: block"
+            />
+            <div class="col-md-5 margin-top-20">
+                <!--begin register-form-wrapper-->
+                <div class="ribbon-wrapper" id="reserve-now-mobile">
+                    <div
+                        class="register-form-wrapper wow bounceIn"
+                        data-wow-delay="0.5s"
+                        style="
+                            visibility: visible;
+                            animation-delay: 0.5s;
+                            animation-name: bounceIn;
+                        "
+                    >
+                        <h3>Reserve Your Shaker & Save 30%</h3>
+                        <p>Only 100 early-bird spots available</p>
+
+                        <!--begin form-->
+                        <div class="ml-embedded" data-form="1cif2J"></div>
+
+                        <!--end form-->
+                        <p style="font-size: 14px; line-height: 20px">
+                            <em
+                                >No payment today. You'll receive a one-time
+                                coupon code early August.</em
+                            >
+                        </p>
+                    </div>
+                    <div class="ribbon">30% OFF</div></div>br>
+                </div>
+                <!--end register-form-wrapper-->
+            </div>
         </section>
         <!--end home section -->
 
@@ -318,6 +362,7 @@
             </div>
             <!--end container -->
         </section>
+
         <!--end section-white -->
 
         <!--begin section-grey -->
@@ -650,104 +695,154 @@
 
         <!--begin faq section -->
         <section class="section-white section-bottom-border" id="faq">
-            <!--begin container -->
             <div class="container">
-                <!--begin row -->
                 <div class="row">
-                    <!--begin col-md-12-->
                     <div class="col-md-12 text-center padding-bottom-10">
                         <h2 class="section-title">
                             Frequently Asked Questions
                         </h2>
                     </div>
-                    <!--end col-md-12 -->
                 </div>
-                <!--end row -->
 
-                <!--begin row -->
                 <div class="row">
-                    <!--begin col-md-6-->
+                    <!-- Left column -->
                     <div class="col-md-6">
                         <div class="faq-box">
-                            <h5>When will I receive my Apexx Steel Shaker?</h5>
-
-                            <p>
-                                We’re shipping the first production batch in
-                                early August. Early-bird members will receive
-                                priority fulfillment before we go live to the
-                                public.
-                            </p>
+                            <div
+                                class="faq-toggle"
+                                data-toggle="collapse"
+                                data-target="#faq1"
+                                aria-expanded="false"
+                            >
+                                <h5>
+                                    When will I receive my Apexx Steel Shaker?
+                                </h5>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="collapse" id="faq1">
+                                <p>
+                                    We’re shipping the first production batch in
+                                    early August. Early-bird members will
+                                    receive priority fulfillment before we go
+                                    live to the public.
+                                </p>
+                            </div>
                         </div>
 
                         <div class="faq-box">
-                            <h5>Do I need to pay now to reserve my shaker?</h5>
-
-                            <p>
-                                Nope! Just fill out the form to reserve your
-                                spot. We’ll email you a one-time 30% OFF coupon
-                                code when orders open.
-                            </p>
+                            <div
+                                class="faq-toggle"
+                                data-toggle="collapse"
+                                data-target="#faq2"
+                                aria-expanded="false"
+                            >
+                                <h5>
+                                    Do I need to pay now to reserve my shaker?
+                                </h5>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="collapse" id="faq2">
+                                <p>
+                                    Nope! Just fill out the form to reserve your
+                                    spot. We’ll email you a one-time 30% OFF
+                                    coupon code when orders open.
+                                </p>
+                            </div>
                         </div>
 
                         <div class="faq-box">
-                            <h5>What if I change my mind later?</h5>
-
-                            <p>
-                                No worries! There’s no commitment or payment
-                                today. If you don’t use your early-bird coupon,
-                                your spot will simply expire after launch.
-                            </p>
-                        </div>
-                    </div>
-                    <!--end col-md-6 -->
-
-                    <!--begin col-md-6-->
-                    <div class="col-md-6">
-                        <div class="faq-box">
-                            <h5>Is the shaker dishwasher safe?</h5>
-
-                            <p>
-                                Yes! The Apexx Steel Shaker is dishwasher safe,
-                                easy to clean, and won’t trap odors like plastic
-                                bottles do.
-                            </p>
-                        </div>
-
-                        <div class="faq-box">
-                            <h5>
-                                What’s so different about Apexx compared to
-                                other shaker bottles?
-                            </h5>
-
-                            <p>
-                                Most shakers are plastic, noisy, and prone to
-                                leaks. Apexx features: Silent 2-in-1 agitator
-                                (no rattling ball), 100% leakproof design, 18/8
-                                stainless steel body Zero plastic odor or
-                                aftertaste, Sustainable & BPA-free
-                            </p>
-                        </div>
-
-                        <div class="faq-box">
-                            <h5>
-                                Is the 30% discount only for the first 100
-                                people?
-                            </h5>
-
-                            <p>
-                                Yes — once the first 100 early-bird reservations
-                                are taken, the discount expires and retail
-                                pricing goes live.
-                            </p>
+                            <div
+                                class="faq-toggle"
+                                data-toggle="collapse"
+                                data-target="#faq3"
+                                aria-expanded="false"
+                            >
+                                <h5>What if I change my mind later?</h5>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="collapse" id="faq3">
+                                <p>
+                                    No worries! There’s no commitment or payment
+                                    today. If you don’t use your early-bird
+                                    coupon, your spot will simply expire after
+                                    launch.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <!--end col-md-6 -->
+                    <!-- Right column -->
+                    <div class="col-md-6">
+                        <div class="faq-box">
+                            <div
+                                class="faq-toggle"
+                                data-toggle="collapse"
+                                data-target="#faq4"
+                                aria-expanded="false"
+                            >
+                                <h5>Is the shaker dishwasher safe?</h5>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="collapse" id="faq4">
+                                <p>
+                                    Yes! The Apexx Steel Shaker is dishwasher
+                                    safe, easy to clean, and won’t trap odors
+                                    like plastic bottles do.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-box">
+                            <div
+                                class="faq-toggle"
+                                data-toggle="collapse"
+                                data-target="#faq5"
+                                aria-expanded="false"
+                            >
+                                <h5>
+                                    What’s so different about Apexx compared to
+                                    other shaker bottles?
+                                </h5>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="collapse" id="faq5">
+                                <p>
+                                    Most shakers are plastic, noisy, and prone
+                                    to leaks. Apexx features: Silent 2-in-1
+                                    agitator (no rattling ball), 100% leakproof
+                                    design, 18/8 stainless steel body, zero
+                                    plastic odor or aftertaste, sustainable &
+                                    BPA-free.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-box">
+                            <div
+                                class="faq-toggle"
+                                data-toggle="collapse"
+                                data-target="#faq6"
+                                aria-expanded="false"
+                            >
+                                <h5>
+                                    Is the 30% discount only for the first 100
+                                    people?
+                                </h5>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="collapse" id="faq6">
+                                <p>
+                                    Yes — once the first 100 early-bird
+                                    reservations are taken, the discount expires
+                                    and retail pricing goes live.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!--end row -->
             </div>
-            <!--end container -->
         </section>
+
         <!--end faq section -->
 
         <!--begin gallery section -->
@@ -1077,6 +1172,7 @@
                     <!-- ... keep other footer columns ... -->
                 </div>
             </div>
+
             <div class="container-fluid footer-bottom">
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -1089,11 +1185,14 @@
                 </div>
             </div>
         </div>
+        <br />
         <!--end footer -->
 
         <div class="sticky-bottom-btn d-block d-md-none">
             <div class="text-center">
-                <a href="#reserve-now" class="btn-red small scrool btn-block"
+                <a href="#" onclick="scrollToForm(); return false;"
+                    class="btn-red small scrool btn-block"
+                    style="margin-top: 0px"
                     >Claim 30% Off</a
                 >
             </div>
