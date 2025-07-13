@@ -3,6 +3,7 @@
 require 'sinatra'
 require 'json'
 require 'logger'
+require 'rack/cache'
 
 # Configure Sinatra
 set :port, 4567
@@ -10,13 +11,18 @@ set :bind, '0.0.0.0'
 set :public_folder, 'public'
 set :views, 'views'
 
+use Rack::Cache,
+    verbose: true,
+    metastore: 'file:/tmp/rack/meta',
+    entitystore: 'file:/tmp/rack/body'
+
 # Logger
 logger = Logger.new($stdout)
 logger.level = Logger::INFO
 
-
 # Routes
 get '/' do
+  headers 'Cache-Control' => 'public, max-age=60'
   # Serve the landing page HTML
   send_file File.join(settings.public_folder, 'index.html')
 end
@@ -26,7 +32,6 @@ get '/health' do
   content_type :json
   { status: 'ok', timestamp: Time.now.iso8601 }.to_json
 end
-
 
 # Error handlers
 error 404 do
@@ -50,6 +55,4 @@ error 500 do
 end
 
 # Start the server
-if __FILE__ == $0
-  logger.info "Starting Apexx Landing Page server on port #{settings.port}"
-end
+logger.info "Starting Apexx Landing Page server on port #{settings.port}" if __FILE__ == $0

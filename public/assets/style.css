@@ -1051,12 +1051,12 @@ p.register-form-terms {
     margin-bottom: 25px;
 }
 
-.process-wrapper {
+/* .process-wrapper {
     position: relative;
     z-index: 999;
     overflow: hidden;
     background: url(../images/process-line.png) no-repeat scroll center 120px;
-}
+} */
 
 .process {
     position: relative;
