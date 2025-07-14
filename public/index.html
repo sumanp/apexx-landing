@@ -64,6 +64,62 @@
 
             gtag("config", "G-WTZ7VV6ER2");
         </script>
+
+        <!-- Meta Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '974655707923453');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=974655707923453&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const interval = setInterval(() => {
+            const successBox = document.querySelector(".ml-form-successBody");
+            const form = document.querySelector(".ml-block-form");
+
+            if (!successBox || !form) return;
+
+            clearInterval(interval);
+
+            const observer = new MutationObserver(() => {
+              const isVisible = getComputedStyle(successBox).display !== "none";
+              if (isVisible) {
+                // Extract values before the form is cleared (ML does that sometimes)
+                const name = form.querySelector('input[name="fields[name]"]')?.value || "";
+                const email = form.querySelector('input[name="fields[email]"]')?.value || "";
+                const phone = form.querySelector('input[name="fields[phone]"]')?.value || "";
+
+                console.log("Sending Meta Pixel Lead event", { name, email, phone });
+
+                // Fire Meta Pixel "Lead" event
+                fbq('track', 'Lead', {
+                  name: name,
+                  email: email,
+                  phone: phone
+                });
+              }
+            });
+
+            observer.observe(successBox, {
+              attributes: true,
+              attributeFilter: ["style"]
+            });
+          }, 100);
+        });
+        </script>
+
     </head>
 
     <body>
